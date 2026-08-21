@@ -41,7 +41,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <Separator className="my-6" />
+      <Separator />
+      <p className="text-center">@trna</p>
     </footer>
   );
 };
