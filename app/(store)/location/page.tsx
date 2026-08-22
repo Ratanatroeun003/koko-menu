@@ -25,12 +25,12 @@ const Page = () => {
               មើល Google Map
             </Link>
           </div>
-          <div className="mx-auto shrink-0 sm:mx-0">
+          <div className="relative w-24 h-24 shrink-0 mx-auto sm:mx-0">
             <Image
               src={store}
               alt="ទីតាំងហាង"
-              width={120}
-              height={120}
+              fill
+              sizes="96px"
               className="rounded-lg object-contain"
             />
           </div>
