@@ -23,7 +23,7 @@ const HomePage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="sticky top-20 z-40 bg-background/95 py-2 backdrop-blur-md">
           <Tabs
-            defaultValue="all"
+            value={category}
             onValueChange={setCategory}
             className="w-fit mx-auto"
           >
@@ -41,16 +41,18 @@ const HomePage = () => {
           </Tabs>
           <Separator className="mt-2" />
         </div>
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <AnimatePresence>
+        <motion.div
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <AnimatePresence mode="popLayout">
             {filteredMenu.map((m, index) => (
               <motion.div
                 key={m.id}
                 layout
                 initial={{ opacity: 0, y: 40, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.4, delay: (index % 4) * 0.08 }}
               >
                 <Card className="relative pt-0 transition-all group duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden bg-card border border-border">
