@@ -11,39 +11,52 @@ import {
   CardHeader,
 } from '@/components/ui/card';
 import { MENU } from '@/config/menu';
+import banner from '@/public/images/menu/banner2.png';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
+
 const HomePage = () => {
   const [category, setCategory] = useState('all');
   const filteredMenu =
     category === 'all' ? MENU : MENU.filter((m) => m.category === category);
   return (
-    <div className="min-h-screen w-full mb-4 px-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="sticky top-20 z-40 bg-background/95 py-2 backdrop-blur-md">
+    <div className="min-h-screen w-full mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="sticky top-0 z-50 bg-background/85 py-2 backdrop-blur-sm">
           <Tabs
             value={category}
             onValueChange={setCategory}
             className="w-fit mx-auto"
           >
             <TabsList variant="line">
-              <TabsTrigger value="all" className="font-khmer">
+              <TabsTrigger value="all" className="font-khmer cursor-pointer">
                 ទាំងអស់
               </TabsTrigger>
-              <TabsTrigger value="drink" className="font-khmer">
+              <TabsTrigger value="drink" className="font-khmer cursor-pointer">
                 ភេសជ្ជៈ
               </TabsTrigger>
-              <TabsTrigger value="food" className="font-khmer">
+              <TabsTrigger value="food" className="font-khmer cursor-pointer">
                 ម្ហូបអាហារ
               </TabsTrigger>
             </TabsList>
           </Tabs>
           <Separator className="mt-2" />
         </div>
+        <div className="relative w-full">
+          <AspectRatio ratio={16 / 5}>
+            <Image
+              src={banner}
+              alt="banner"
+              priority
+              fill
+              className="object-cover rounded-xl overflow-hidden border"
+            />
+          </AspectRatio>
+        </div>
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           <AnimatePresence mode="popLayout">
             {filteredMenu.map((m, index) => (
@@ -56,7 +69,7 @@ const HomePage = () => {
                 transition={{ duration: 0.4, delay: (index % 4) * 0.08 }}
               >
                 <Card className="relative pt-0 transition-all group duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden bg-card border border-border">
-                  <AspectRatio ratio={3 / 4}>
+                  <AspectRatio ratio={1 / 1}>
                     <Image
                       src={m.image}
                       fill
@@ -67,15 +80,13 @@ const HomePage = () => {
                     />
                   </AspectRatio>
                   <CardHeader>
-                    <CardTitle>{m.name}</CardTitle>
+                    <CardTitle className="line-clamp-1">{m.name}</CardTitle>
                     <CardAction>
                       <Badge>{m.category}</Badge>
                     </CardAction>
                   </CardHeader>
-                  <CardFooter>
-                    <span className="text-lg font-semibold">
-                      ${m.price.toFixed(2)}
-                    </span>
+                  <CardFooter className="font-semibold">
+                    ${m.price.toFixed(2)}
                   </CardFooter>
                 </Card>
               </motion.div>
