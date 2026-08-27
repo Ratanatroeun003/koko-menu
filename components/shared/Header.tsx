@@ -21,7 +21,7 @@ const Header = () => {
         </Link>
         <h1 className="flex flex-col items-center justify-center text-center">
           <span className="font-sans text-base font-extrabold tracking-wide text-primary sm:text-lg md:text-xl lg:text-2xl">
-            KOKO COFFEE
+            KOKO PUB
           </span>
           <span className="hidden font-khmer text-xs font-medium text-muted-foreground sm:inline-block md:text-sm">
             សូមស្វាគមន៍
@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex justify-end">
           <Link
             href="/location"
-            className="underline-offset-4 flex text-green-500 text-sm underline font-khmer hover:scale-95 transition-all duration-200"
+            className="underline-offset-4 flex font-semibold hover:text-slate-100 text-green-700 text-sm underline font-khmer hover:scale-95 transition-all duration-200"
           >
             <MapPinned />
             <span className="hidden sm:block">មើលទីតាំងហាង</span>

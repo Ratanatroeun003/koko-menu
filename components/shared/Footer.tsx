@@ -4,7 +4,7 @@ import { Separator } from '@/components/ui/separator';
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-border rounded-md bg-muted/40">
+    <footer className="w-full border-t border-border rounded-md bg-background">
       {/* Main Footer */}
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         {/* Column 1 */}

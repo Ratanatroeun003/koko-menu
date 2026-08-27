@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <main className="min-h-screen w-full px-4 py-8">
       <div className="mx-auto w-full max-w-7xl">
-        <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-xl border bg-card p-5 shadow-sm sm:p-6 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-xl border bg-muted p-5 shadow-sm sm:p-6 md:flex-row md:items-center md:justify-between">
           <div className="min-w-0 flex-1">
             <h1 className="font-khmer mb-3 text-2xl font-bold">ទីតាំងទី១</h1>
 
