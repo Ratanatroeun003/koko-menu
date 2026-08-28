@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import store from '@/public/images/menu/stores.png';
+import store from '@/public/images/menu/location_kt.png';
 
 const Page = () => {
   return (
