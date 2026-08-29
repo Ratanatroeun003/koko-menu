@@ -82,7 +82,7 @@ const HomePage = () => {
                         fill
                         alt={m.name}
                         priority={index < 4}
-                        className="object-contain transition-transform group-hover:scale-105 ease-in-out duration-300"
+                        className="object-cover transition-transform group-hover:scale-105 ease-in-out duration-300"
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       />
                     </AspectRatio>

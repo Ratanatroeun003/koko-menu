@@ -160,11 +160,11 @@ export const MENU = [
   { id: "34", name: "អន្ទង់ឆាម្ទេសជ្រក់", price: 4.00, category: "eel", image: "/images/menu/34.webp" },
 
   // 18. បាយ និង មី (category: "rice-noodle")
-  { id: "1", name: "បាយឆាសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/demo.jpg" },
+  { id: "1", name: "បាយឆាសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/demo1.jpg" },
   { id: "2", name: "បាយឆាយ៉ាងចូវ", price: 4.00, category: "rice-noodle", image: "/images/menu/demo2.jpg" },
   { id: "3", name: "បាយឆាគ្រឿងសមុទ្រ", price: 4.00, category: "rice-noodle", image: "/images/menu/demo3.jpg" },
   { id: "4", name: "មីឆាសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/demo4.jpg" },
-  { id: "5", name: "មីឆាគ្រឿងសមុទ្រ", price: 3.00, category: "rice-noodle", image: "/images/menu/5.webp" },
+  { id: "5", name: "មីឆាគ្រឿងសមុទ្រ", price: 3.00, category: "rice-noodle", image: "/images/menu/demo5.jpg" },
   { id: "6", name: "បាយឆាម្រះព្រៅសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/6.webp" },
   { id: "7", name: "បាយលីងទឹកអំបិល", price: 3.00, category: "rice-noodle", image: "/images/menu/7.webp" },
 
