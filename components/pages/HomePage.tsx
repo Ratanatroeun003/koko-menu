@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardFooter, CardTitle } from '@/components/ui/card';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import { MENU, CATEGORIES } from '@/config/menu';
@@ -48,7 +48,7 @@ const HomePage = () => {
         </div>
         <Separator className="mt-2" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 mt-4">
+      <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 space-y-6 mt-4">
         {/* Banner Container */}
         <div className="relative aspect-16/6 overflow-hidden rounded-xl border border-border shadow-sm">
           <Image
@@ -62,7 +62,7 @@ const HomePage = () => {
         </div>
         <motion.div
           layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-6"
         >
           <AnimatePresence mode="popLayout">
             {filteredMenu.map((m, index) => (
@@ -74,7 +74,7 @@ const HomePage = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
               >
-                <Card className="relative p-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
+                <Card className="relative p-0 m-0 gap-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
                   <div className="relative w-full">
                     <AspectRatio ratio={1}>
                       <Image
@@ -90,11 +90,11 @@ const HomePage = () => {
                       ${m.price.toFixed(2)}
                     </Badge>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="line-clamp-1 pb-1 font-khmer text-base">
+                  <CardFooter className="p-0 bg-background flex items-center justify-center">
+                    <p className="font-khmer text-sm text-center line-clamp-1 font-medium">
                       {m.name}
-                    </CardTitle>
-                  </CardHeader>
+                    </p>
+                  </CardFooter>
                 </Card>
               </motion.div>
             ))}

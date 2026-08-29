@@ -31,7 +31,7 @@ export const CATEGORIES = [
 
 export const MENU = [
   // 1. ស្រាក្រឡុក 1ថូ (category: "cocktail-jug")
-  { id: "92", name: "ស្រាក្រឡុករសជាតិ Strawberry 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/92.webp" },
+  { id: "92", name: "រសជាតិ Strawberry 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/92.webp" },
   { id: "93", name: "ស្រាក្រឡុករសជាតិ Blueberry 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/93.webp" },
   { id: "94", name: "ស្រាក្រឡុករសជាតិ Peach 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/94.webp" },
   { id: "95", name: "ស្រាក្រឡុករសជាតិ Passion 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/95.webp" },
