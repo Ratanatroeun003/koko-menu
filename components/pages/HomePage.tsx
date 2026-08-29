@@ -74,7 +74,7 @@ const HomePage = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
               >
-                <Card className="relative pt-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
+                <Card className="relative p-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
                   <div className="relative w-full">
                     <AspectRatio ratio={1}>
                       <Image
@@ -82,7 +82,7 @@ const HomePage = () => {
                         fill
                         alt={m.name}
                         priority={index < 4}
-                        className="object-cover transition-transform group-hover:scale-105 ease-in-out duration-300"
+                        className="object-contain transition-transform group-hover:scale-105 ease-in-out duration-300"
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       />
                     </AspectRatio>
@@ -91,7 +91,7 @@ const HomePage = () => {
                     </Badge>
                   </div>
                   <CardHeader>
-                    <CardTitle className="line-clamp-1 font-khmer text-base">
+                    <CardTitle className="line-clamp-1 pb-1 font-khmer text-base">
                       {m.name}
                     </CardTitle>
                   </CardHeader>
