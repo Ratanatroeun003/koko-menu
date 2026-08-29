@@ -1,20 +1,34 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardHeader, CardFooter, CardTitle } from '@/components/ui/card';
+import { Card, CardFooter } from '@/components/ui/card';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import { MENU, CATEGORIES } from '@/config/menu';
-import banner from '@/public/images/menu/banner.png';
+import banner1 from '@/public/images/menu/banner1.png';
+import banner2 from '@/public/images/menu/banner2.jpg';
+import banner3 from '@/public/images/menu/banner3.jpg';
 
 const HomePage = () => {
+  const banners = [banner1, banner2, banner3];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // 2. កំណត់ម៉ោងឱ្យវាដូររូបភាពដោយស្វ័យប្រវត្តិរៀងរាល់ 5 វិនាទី (4000ms)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
   const [category, setCategory] = useState('all');
   const filteredMenu =
     category === 'all' ? MENU : MENU.filter((m) => m.category === category);
+
   return (
     <div className="min-h-screen w-full mb-4">
       <div className="sticky top-0 z-50 bg-background/85 backdrop-blur-md py-2 shadow-xs">
@@ -48,17 +62,28 @@ const HomePage = () => {
         </div>
         <Separator className="mt-2" />
       </div>
-      <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 space-y-6 mt-4">
+      <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 space-y-2 mt-4">
         {/* Banner Container */}
-        <div className="relative aspect-16/6 overflow-hidden rounded-xl border border-border shadow-sm">
-          <Image
-            src={banner}
-            alt="KOKO PUB banner"
-            fill
-            sizes="(max-width: 1280px) 100vw, 1280px"
-            priority
-            className="object-cover"
-          />
+        <div className="relative aspect-16/12 sm:aspect-16/6  overflow-hidden rounded-xl border border-border shadow-sm">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={banners[currentIndex]}
+                alt={`KOKO PUB banner ${currentIndex + 1}`}
+                fill
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                priority
+                className="object-cover"
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
         <motion.div
           layout

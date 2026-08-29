@@ -4,6 +4,7 @@ import {
   Geist_Mono,
   Inter,
   Noto_Sans,
+  Bungee_Shade,
   Noto_Sans_Khmer,
 } from 'next/font/google';
 import './globals.css';
@@ -23,6 +24,11 @@ const geistSans = Geist({
 const notoSansKhmer = Noto_Sans_Khmer({
   variable: '--font-khmer',
   subsets: ['khmer'],
+});
+const bungeeShade = Bungee_Shade({
+  variable: '--font-bungee',
+  subsets: ['latin'],
+  weight: '400',
 });
 
 const geistMono = Geist_Mono({
@@ -48,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         'font-sans',
         inter.variable,
         notoSansHeading.variable,
+        bungeeShade.variable,
       )}
     >
       <body className="min-h-full flex flex-col">{children}</body>
