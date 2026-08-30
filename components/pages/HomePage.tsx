@@ -108,12 +108,11 @@ const HomePage = () => {
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       />
                     </AspectRatio>
-                    <div className="absolute inset-x-0 top-0 h-12 bg-linear-to-b from-black/40 to-transparent pointer-events-none" />
                     <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold">
                       ${m.price.toFixed(2)}
                     </Badge>
                   </div>
-                  <CardFooter className="rounded-none p-0 bg-slate-300 flex items-center justify-center">
+                  <CardFooter className="rounded-none p-0 bg-background flex items-center justify-center">
                     <p className="font-khmer text-sm text-center line-clamp-1 font-medium">
                       {m.name}
                     </p>
