@@ -96,7 +96,7 @@ const HomePage = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
               >
-                <Card className="relative  p-0 m-0 gap-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
+                <Card className="relative rounded-b-none  p-0 m-0 gap-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
                   <div className="relative w-full overflow-hidden">
                     <AspectRatio ratio={1}>
                       <Image
@@ -112,8 +112,8 @@ const HomePage = () => {
                       ${m.price.toFixed(2)}
                     </Badge>
                   </div>
-                  <CardFooter className="rounded-none p-0 bg-background flex items-center justify-center">
-                    <p className="font-khmer text-sm text-center line-clamp-1 font-medium">
+                  <CardFooter className="p-0 py-1 bg-background flex items-center justify-center border-t border-border/40">
+                    <p className="font-khmer text-xl text-center line-clamp-2 font-medium leading-tight text-foreground">
                       {m.name}
                     </p>
                   </CardFooter>

@@ -31,13 +31,13 @@ export const CATEGORIES = [
 
 export const MENU = [
   // 1. ស្រាក្រឡុក 1ថូ (category: "cocktail-jug")
-  { id: "92", name: "រសជាតិ Strawberry 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/92.webp" },
-  { id: "93", name: "ស្រាក្រឡុករសជាតិ Blueberry 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/93.webp" },
-  { id: "94", name: "ស្រាក្រឡុករសជាតិ Peach 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/94.webp" },
-  { id: "95", name: "ស្រាក្រឡុករសជាតិ Passion 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/95.webp" },
-  { id: "96", name: "ស្រាក្រឡុករសជាតិ Kiwi 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/96.webp" },
-  { id: "97", name: "ស្រាក្រឡុករសជាតិ Melon 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/97.webp" },
-  { id: "98", name: "ស្រាក្រឡុករសជាតិ Blue Margarita 1ថូ", price: 7.00, category: "cocktail-jug", image: "/images/menu/98.webp" },
+  { id: "92", name: "ស្រាក្រឡុកStrawberry", price: 7.00, category: "cocktail-jug", image: "/images/menu/92.webp" },
+  { id: "93", name: "ស្រាក្រឡុកBlueberry", price: 7.00, category: "cocktail-jug", image: "/images/menu/93.webp" },
+  { id: "94", name: "ស្រាក្រឡុកPeach", price: 7.00, category: "cocktail-jug", image: "/images/menu/94.webp" },
+  { id: "95", name: "ស្រាក្រឡុកPassion", price: 7.00, category: "cocktail-jug", image: "/images/menu/95.webp" },
+  { id: "96", name: "ស្រាក្រឡុកKiwi", price: 7.00, category: "cocktail-jug", image: "/images/menu/96.webp" },
+  { id: "97", name: "ស្រាក្រឡុកMelon", price: 7.00, category: "cocktail-jug", image: "/images/menu/97.webp" },
+  { id: "98", name: "ស្រាក្រឡុកBlueMargarita", price: 7.00, category: "cocktail-jug", image: "/images/menu/98.webp" },
 
   // 2. Cocktail Glass (category: "cocktail-glass")
   { id: "110", name: "Blue Margarita", price: 3.00, category: "cocktail-glass", image: "/images/menu/110.webp" },
@@ -80,7 +80,7 @@ export const MENU = [
   { id: "8", name: "ជើងមាន់បំពងខ្ទឹមស", price: 4.00, category: "chicken", image: "/images/menu/8.webp" },
   { id: "9", name: "ជើងមាន់អាំងអំបិលម្ទេស", price: 4.00, category: "chicken", image: "/images/menu/9.webp" },
   { id: "10", name: "មាន់លីងចេកខ្ចី", price: 4.00, category: "chicken", image: "/images/menu/10.webp" },
-  { id: "11", name: "ជើងមាន់លីងចេកខ្ចី", price: 4.00, category: "chicken", image: "/images/menu/11.webp" },
+  { id: "11", name: "ជើងមាន់លីងចេកខ្ចី", price: 4.00, category: "chicken", image: "/images/menu/10.webp" },
   { id: "12", name: "ជើងមាន់លីងអំបិលម្ទេស", price: 4.00, category: "chicken", image: "/images/menu/12.webp" },
   { id: "13", name: "មាន់លីងអំបិលម្ទេស", price: 4.00, category: "chicken", image: "/images/menu/13.webp" },
   { id: "14", name: "សរសៃកែងមាន់បំពងខ្ទឹមស", price: 4.00, category: "chicken", image: "/images/menu/14.webp" },
@@ -100,7 +100,7 @@ export const MENU = [
 
   // 10. ងៀត (category: "dried-meat")
   { id: "81", name: "ងៀតគោអាំង", price: 4.00, category: "dried-meat", image: "/images/menu/81.webp" },
-  { id: "82", name: "ងៀតក្របីអាំង", price: 4.00, category: "dried-meat", image: "/images/menu/82.webp" },
+  { id: "82", name: "ងៀតក្របីអាំង", price: 4.00, category: "dried-meat", image: "/images/menu/81.webp" },
   { id: "83", name: "យ៉ាហ៊ឺអាំង", price: 4.00, category: "dried-meat", image: "/images/menu/83.webp" },
   { id: "84", name: "យ៉ាហុឺលីងពងទាប្រៃ", price: 4.00, category: "dried-meat", image: "/images/menu/84.webp" },
   { id: "85", name: "ពោតលីងពងទាប្រៃ", price: 4.00, category: "dried-meat", image: "/images/menu/85.webp" },
