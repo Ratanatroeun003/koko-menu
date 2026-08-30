@@ -57,7 +57,7 @@ export const MENU = [
   { id: "102", name: "ហនុមានកំប៉ុងខ្មៅ", price: 1.25, category: "beer", image: "/images/menu/102.webp" },
   { id: "103", name: "កម្ពុជាកំប៉ុងស", price: 0.75, category: "beer", image: "/images/menu/103.webp" },
   { id: "104", name: "កម្ពុជាដបស", price: 1.50, category: "beer", image: "/images/menu/104.webp" },
-  { id: "105", name: "ថៃហ្گیرដបស", price: 1.50, category: "beer", image: "/images/menu/105.webp" },
+  { id: "105", name: "ថៃហ្គឺដបស", price: 1.50, category: "beer", image: "/images/menu/105.webp" },
   { id: "106", name: "ABC ស៊ីងហ្គាពួរ", price: 2.00, category: "beer", image: "/images/menu/106.webp" },
 
   // 5. ភេសជ្ជៈ (category: "soft-drink")
@@ -160,11 +160,11 @@ export const MENU = [
   { id: "34", name: "អន្ទង់ឆាម្ទេសជ្រក់", price: 4.00, category: "eel", image: "/images/menu/34.webp" },
 
   // 18. បាយ និង មី (category: "rice-noodle")
-  { id: "1", name: "បាយឆាសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/demo1.jpg" },
-  { id: "2", name: "បាយឆាយ៉ាងចូវ", price: 4.00, category: "rice-noodle", image: "/images/menu/demo2.jpg" },
-  { id: "3", name: "បាយឆាគ្រឿងសមុទ្រ", price: 4.00, category: "rice-noodle", image: "/images/menu/demo3.jpg" },
-  { id: "4", name: "មីឆាសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/demo4.jpg" },
-  { id: "5", name: "មីឆាគ្រឿងសមុទ្រ", price: 3.00, category: "rice-noodle", image: "/images/menu/demo5.jpg" },
+  { id: "1", name: "បាយឆាសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/1.webp" },
+  { id: "2", name: "បាយឆាយ៉ាងចូវ", price: 4.00, category: "rice-noodle", image: "/images/menu/2.webp" },
+  { id: "3", name: "បាយឆាគ្រឿងសមុទ្រ", price: 4.00, category: "rice-noodle", image: "/images/menu/3.webp" },
+  { id: "4", name: "មីឆាសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/4.webp" },
+  { id: "5", name: "មីឆាគ្រឿងសមុទ្រ", price: 3.00, category: "rice-noodle", image: "/images/menu/5.webp" },
   { id: "6", name: "បាយឆាម្រះព្រៅសាច់គោ", price: 3.00, category: "rice-noodle", image: "/images/menu/6.webp" },
   { id: "7", name: "បាយលីងទឹកអំបិល", price: 3.00, category: "rice-noodle", image: "/images/menu/7.webp" },
 
@@ -180,6 +180,8 @@ export const MENU = [
   { id: "78", name: "ស្ពៃតឿឆាប្រេងខ្យង", price: 3.00, category: "vegetable", image: "/images/menu/78.webp" },
   { id: "79", name: "ខាត់ណាពិសេស", price: 4.00, category: "vegetable", image: "/images/menu/79.webp" },
   { id: "80", name: "ឆាបន្លែគ្រប់មុខ", price: 4.00, category: "vegetable", image: "/images/menu/80.webp" },
+  { id: "117", name: "ខាត់ណាទឺកភ្នែក", price: 4.00, category: "vegetable", image: "/images/menu/117.webp" },
+  { id: "118", name: "សម្រស់KOKO", price: 7.00, category: "vegetable", image: "/images/menu/118.webp" },
 
   // 21. បំពង (category: "fried")
   { id: "87", name: "ត្រាវបំពង", price: 3.00, category: "fried", image: "/images/menu/87.webp" },

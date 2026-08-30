@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import store from '@/public/images/menu/koko_pub.jpg';
+import store from '@/public/images/menu/koko_pub.webp';
 
 const Page = () => {
   return (

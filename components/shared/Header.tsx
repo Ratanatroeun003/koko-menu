@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/public/images/menu/koko_pub.jpg';
+import logo from '@/public/images/menu/koko_pub.webp';
 import { MapPinPlusIcon } from 'lucide-react';
 
 const Header = () => {
@@ -13,6 +13,7 @@ const Header = () => {
               src={logo}
               alt="Koko Pub Logo"
               fill
+              priority
               className="object-cover"
             />
           </div>
