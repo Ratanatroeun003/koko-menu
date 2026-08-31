@@ -16,19 +16,27 @@ const HomePage = () => {
   const banners = [banner1, banner2];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [category, setCategory] = useState('all');
+  const [isPaused, setIsPaused] = useState(false);
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused, banners.length]);
   const filteredMenu =
     category === 'all' ? MENU : MENU.filter((m) => m.category === category);
   return (
     <div className="min-h-screen w-full mb-4">
       <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 space-y-2 mt-4">
         {/* Banner Container */}
-        <div className="relative aspect-video overflow-hidden rounded-xl border border-border shadow-sm">
+        <div
+          className="relative aspect-video overflow-hidden rounded-xl border border-border shadow-sm"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(false)}
+          onTouchEnd={() => setIsPaused(false)}
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
