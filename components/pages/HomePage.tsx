@@ -21,11 +21,14 @@ const HomePage = () => {
     if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [isPaused, banners.length]);
-  const filteredMenu =
-    category === 'all' ? MENU : MENU.filter((m) => m.category === category);
+  const filteredMenu = MENU.filter((m) => {
+    if (category === 'all') return true;
+    if (category === 'featured') return m.featured === true;
+    return m.category === category;
+  });
   return (
     <div className="min-h-screen w-full mb-4">
       <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 space-y-2 mt-4">
@@ -73,6 +76,12 @@ const HomePage = () => {
                   className="font-khmer text-2xl cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
                 >
                   ទាំងអស់
+                </TabsTrigger>
+                <TabsTrigger
+                  value="featured"
+                  className="font-khmer text-2xl cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
+                >
+                  ប្រចាំហាង
                 </TabsTrigger>
                 {CATEGORIES.map((cat) => (
                   <TabsTrigger
