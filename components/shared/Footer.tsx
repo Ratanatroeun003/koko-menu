@@ -5,11 +5,10 @@ import { Separator } from '@/components/ui/separator';
 const Footer = () => {
   return (
     <footer className="w-full border-t border-border rounded-md bg-background">
-      {/* Main Footer */}
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 sm:gap-8 px-4 py-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         {/* Column 1 */}
-        <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-bold">Quick Links</h2>
+        <div>
+          {/* <h2 className="text-lg font-bold">Quick Links</h2>
           <nav className="flex flex-col items-start gap-2 text-sm text-muted-foreground">
             <Link
               href="/"
@@ -35,11 +34,11 @@ const Footer = () => {
             >
               About
             </Link>
-          </nav>
+          </nav> */}
         </div>
         {/* Column 2 */}
-        <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-bold">Menu</h2>
+        <div>
+          {/* <h2 className="text-lg font-bold">Menu</h2>
 
           <nav className="flex flex-col items-start gap-2 text-sm text-muted-foreground">
             <Link
@@ -60,15 +59,14 @@ const Footer = () => {
             >
               Drink
             </Link>
-          </nav>
+          </nav> */}
         </div>
         {/* Column 3 */}
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-bold">Contact</h2>
 
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <p>Phone: 012 345 678</p>
-            <p>Email: example@gmail.com</p>
+            <p>tel: 096 6998 037</p>
             <p>Phnom Penh, Cambodia</p>
           </div>
         </div>
@@ -77,16 +75,20 @@ const Footer = () => {
           <h2 className="text-lg font-bold">Follow Us</h2>
 
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <Link href="#" className="transition-colors hover:text-foreground">
-              Facebook
-            </Link>
-            <Link href="#" className="transition-colors hover:text-foreground">
-              Telegram
-            </Link>
-
-            <Link href="#" className="transition-colors hover:text-foreground">
-              Instagram
-            </Link>
+            <a
+              href="https://www.facebook.com/share/1GJaLQK9Zf/?mibextid=wwXIfr"
+              className="transition-colors hover:text-foreground"
+            >
+              Facebook Page
+            </a>
+            <a
+              href="https://t.me/+855966998037"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              ឆាតទៅកាន់ Telegram
+            </a>
           </div>
         </div>
       </div>

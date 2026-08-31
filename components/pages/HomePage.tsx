@@ -9,13 +9,11 @@ import { Card, CardFooter } from '@/components/ui/card';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import { MENU, CATEGORIES } from '@/config/menu';
-import banner1 from '@/public/images/menu/banner1.png';
-import banner2 from '@/public/images/menu/banner2.jpg';
-import banner3 from '@/public/images/menu/banner3.jpg';
-import banner4 from '@/public/images/menu/banner6.png';
+import banner1 from '@/public/images/menu/banner1.webp';
+import banner2 from '@/public/images/menu/banner2.webp';
 
 const HomePage = () => {
-  const banners = [banner1, banner2, banner3, banner4];
+  const banners = [banner1, banner2];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [category, setCategory] = useState('all');
   useEffect(() => {
@@ -51,8 +49,8 @@ const HomePage = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-        <div className="sticky top-0 z-50 bg-background/85 backdrop-blur-md py-2 shadow-xs">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="sticky top-0 z-50 bg-background/85 backdrop-blur-md shadow-xs">
+          <div className="max-w-7xl py-4 mx-auto px-4 sm:px-6 lg:px-8 border-t border-border">
             <Tabs
               value={category}
               onValueChange={setCategory}
@@ -60,11 +58,11 @@ const HomePage = () => {
             >
               <TabsList
                 variant="line"
-                className="flex w-full overflow-x-auto whitespace-nowrap flex-nowrap justify-start no-scrollbar gap-2 py-1 touch-pan-x scroll-smooth"
+                className="flex w-full overflow-x-auto whitespace-nowrap flex-nowrap justify-start no-scrollbar gap-2 touch-pan-x scroll-smooth"
               >
                 <TabsTrigger
                   value="all"
-                  className="font-khmer cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
+                  className="font-khmer text-2xl cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
                 >
                   ទាំងអស់
                 </TabsTrigger>
@@ -72,7 +70,7 @@ const HomePage = () => {
                   <TabsTrigger
                     key={cat.id}
                     value={cat.id}
-                    className="font-khmer cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
+                    className="font-khmer text-2xl cursor-pointer whitespace-nowrap shrink-0 px-4 py-2"
                   >
                     {cat.name}
                   </TabsTrigger>

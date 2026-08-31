@@ -24,13 +24,14 @@ export const CATEGORIES = [
 
   // 4. Rice, Noodles, Salad & Sides
   { id: "rice-noodle", name: "បាយ និង មី", nameEn: "Rice & Noodles" },
-  { id: "salad", name: "ញ៉ាំ", nameEn: "Salad" },
+  { id: "salad", name: "ញាំ", nameEn: "Salad" },
   { id: "vegetable", name: "ឆាបន្លែ", nameEn: "Stir-fried Vegetables" },
   { id: "fried", name: "បំពង", nameEn: "Deep Fried" },
 ];
 
 export const MENU = [
   // 1. ស្រាក្រឡុក 1ថូ (category: "cocktail-jug")
+   { id: "119", name: "ស្រាក្រឡុកPromotion", price: 7.00, category: "cocktail-jug", image: "/images/menu/119.webp" },
   { id: "92", name: "ស្រាក្រឡុកStrawberry", price: 7.00, category: "cocktail-jug", image: "/images/menu/92.webp" },
   { id: "93", name: "ស្រាក្រឡុកBlueberry", price: 7.00, category: "cocktail-jug", image: "/images/menu/93.webp" },
   { id: "94", name: "ស្រាក្រឡុកPeach", price: 7.00, category: "cocktail-jug", image: "/images/menu/94.webp" },
@@ -169,9 +170,9 @@ export const MENU = [
   { id: "7", name: "បាយលីងទឹកអំបិល", price: 3.00, category: "rice-noodle", image: "/images/menu/7.webp" },
 
   // 19. ញ៉ាំ (category: "salad")
-  { id: "72", name: "ស្វាយញ៉ាំត្រីឆ្អើរ", price: 4.00, category: "salad", image: "/images/menu/72.webp" },
-  { id: "73", name: "ញ៉ាំម្កាក់ត្រីឆ្អើរ", price: 4.00, category: "salad", image: "/images/menu/73.webp" },
-  { id: "74", name: "ញ៉ាំមីសួរគ្រឿងសមុទ្រ", price: 4.00, category: "salad", image: "/images/menu/74.webp" },
+  { id: "72", name: "ស្វាយញាំត្រីឆ្អើរ", price: 4.00, category: "salad", image: "/images/menu/72.webp" },
+  { id: "73", name: "ញាំម្កាក់ត្រីឆ្អើរ", price: 4.00, category: "salad", image: "/images/menu/73.webp" },
+  { id: "74", name: "ញាំមីសួរគ្រឿងសមុទ្រ", price: 4.00, category: "salad", image: "/images/menu/74.webp" },
   { id: "75", name: "គល់គ្រាវបង្គាគ្រាម", price: 4.00, category: "salad", image: "/images/menu/75.webp" },
   { id: "76", name: "ក្ដាមប្រៃ", price: 4.00, category: "salad", image: "/images/menu/76.webp" },
 

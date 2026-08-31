@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/public/images/menu/koko_pub.webp';
-import { MapPinPlusIcon } from 'lucide-react';
+import { MapPinPlusIcon, Phone } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="w-full bg-slate-900 border-b border-slate-800 backdrop-blur-sm">
+    <header className="w-full bg-black border-b border-slate-800 backdrop-blur-sm">
       <div className="max-w-7xl w-full mx-auto px-4 py-2 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-sky-400/50 group-hover:border-sky-400 transition-colors shadow-md">
@@ -26,12 +26,22 @@ const Header = () => {
             </span>
           </div>
         </Link>
-        <Link href="/location" className="text-green-300 hover:scale-105">
-          <div className="flex">
-            <MapPinPlusIcon />
-            <p>Location</p>
-          </div>
-        </Link>
+        <div className="flex flex-col gap-1 font-semibold">
+          <Link href="/location" className="text-green-300 hover:scale-105">
+            <div className="flex gap-1">
+              <MapPinPlusIcon />
+              <p>Location</p>
+            </div>
+          </Link>
+          <a
+            href="tel:+855966998037"
+            className="text-green-300 hover:scale-105"
+          >
+            <div className="flex gap-1">
+              <Phone /> 096 6998 037
+            </div>
+          </a>
+        </div>
       </div>
     </header>
   );
