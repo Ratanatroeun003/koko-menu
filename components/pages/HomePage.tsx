@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
 import { Card, CardFooter } from '@/components/ui/card';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
@@ -65,11 +66,12 @@ const HomePage = () => {
             <Tabs
               value={category}
               onValueChange={setCategory}
+              // orientation="vertical"
               className="w-full max-w-4xl mx-auto"
             >
               <TabsList
                 variant="line"
-                className="flex w-full overflow-x-auto whitespace-nowrap flex-nowrap justify-start no-scrollbar gap-2 touch-pan-x scroll-smooth"
+                className="flex w-full overflow-x-auto whitespace-nowrap flex-nowrap justify-start no-scrollbar gap-2 touch-pan-x scroll-smooth max-w-full"
               >
                 <TabsTrigger
                   value="all"
@@ -111,28 +113,30 @@ const HomePage = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25 }}
               >
-                <Card className="relative rounded-b-none  p-0 m-0 gap-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
-                  <div className="relative w-full overflow-hidden">
-                    <AspectRatio ratio={1}>
-                      <Image
-                        src={m.image}
-                        fill
-                        alt={m.name}
-                        priority={index < 4}
-                        className="object-cover transition-transform scale-110 ease-in-out duration-300"
-                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      />
-                    </AspectRatio>
-                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold">
-                      ${m.price.toFixed(2)}
-                    </Badge>
-                  </div>
-                  <CardFooter className="p-0 py-1 bg-background flex items-center justify-center border-t border-border/40">
-                    <p className="font-khmer text-xl text-center line-clamp-2 font-medium leading-tight text-foreground">
-                      {m.name}
-                    </p>
-                  </CardFooter>
-                </Card>
+                <Link href={`/menu/${m.id}`} className="w-full h-full">
+                  <Card className="relative rounded-b-none  p-0 m-0 gap-0 transition-all group duration-300 hover:-translate-y-1 overflow-hidden hover:shadow-lg bg-card border border-border flex flex-col h-full">
+                    <div className="relative w-full overflow-hidden">
+                      <AspectRatio ratio={1}>
+                        <Image
+                          src={m.image}
+                          fill
+                          alt={m.name}
+                          priority={index < 4}
+                          className="object-cover transition-transform scale-110 ease-in-out duration-300"
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
+                      </AspectRatio>
+                      <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold">
+                        ${m.price.toFixed(2)}
+                      </Badge>
+                    </div>
+                    <CardFooter className="p-0 py-1 bg-background flex items-center justify-center border-t border-border/40">
+                      <p className="font-khmer text-xl text-center line-clamp-2 font-medium leading-tight text-foreground">
+                        {m.name}
+                      </p>
+                    </CardFooter>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>
