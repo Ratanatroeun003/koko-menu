@@ -1,5 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
+import {
+  FaFacebook,
+  FaTelegram,
+  FaPhone,
+  FaFacebookMessenger,
+} from 'react-icons/fa';
 import { Separator } from '@/components/ui/separator';
 
 const Footer = () => {
@@ -96,9 +100,35 @@ const Footer = () => {
       <Separator />
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-sm text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
         <p>© {new Date().getFullYear()} Koko Cafe. All rights reserved.</p>
-        <p>
-          Made by <span className="font-medium text-foreground">@trna</span>
-        </p>
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
+          <p>
+            Made by <span className="font-bold text-gray-950">@trna</span>
+          </p>
+          <span className="font-medium text-foreground flex items-center justify-center gap-2">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://t.me/TroeunRatana"
+              className="transition-colors hover:text-blue-500 hover:scale-110 border-2 border-gray-950 rounded-full p-1"
+            >
+              <FaTelegram size="18" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/share/1aCyYxFoSR/?mibextid=wwXIfr"
+              className="transition-colors hover:text-blue-500 hover:scale-110 border-2 border-gray-950 rounded-full p-1"
+            >
+              <FaFacebook size="18" />
+            </a>
+            <a
+              href="tel:+855714407205"
+              className="transition-colors hover:text-blue-500 hover:scale-110 border-2 border-gray-950 rounded-full p-1"
+            >
+              <FaPhone size="18" />
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   );

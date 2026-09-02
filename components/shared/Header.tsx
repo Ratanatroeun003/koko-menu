@@ -13,6 +13,7 @@ const Header = () => {
               src={logo}
               alt="Koko Pub Logo"
               fill
+              sizes="64px"
               priority
               className="object-cover"
             />
