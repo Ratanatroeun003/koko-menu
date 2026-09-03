@@ -1,9 +1,4 @@
-import {
-  FaFacebook,
-  FaTelegram,
-  FaPhone,
-  FaFacebookMessenger,
-} from 'react-icons/fa';
+import { FaFacebook, FaTelegram, FaPhone } from 'react-icons/fa';
 import { Separator } from '@/components/ui/separator';
 
 const Footer = () => {

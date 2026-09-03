@@ -1,3 +1,20 @@
+export interface Category {
+  id: string;
+  name: string;
+  nameEn: string;
+}
+
+export interface MenuItem {
+  id: string;
+  name: string;
+  price: number;
+  category: CategoryId;
+  image: string;
+  featured?: boolean;
+}
+export type CategoryId = (typeof CATEGORIES)[number]['id'];
+export type FilterCategory = 'all' | 'featured' | CategoryId;
+
 export const CATEGORIES = [
   // 1. Cocktails & Drinks
   { id: "cocktail-jug", name: "ស្រាក្រឡុក 1ថូ", nameEn: "Cocktail Pitcher" },
@@ -27,9 +44,9 @@ export const CATEGORIES = [
   { id: "salad", name: "ញាំ", nameEn: "Salad" },
   { id: "vegetable", name: "ឆាបន្លែ", nameEn: "Stir-fried Vegetables" },
   { id: "fried", name: "បំពង", nameEn: "Deep Fried" },
-];
+] as const;
 
-export const MENU = [
+export const MENU:MenuItem[] = [
   // ==========================================
   // 1. ស្រាក្រឡុក 1ថូ (cocktail-jug)
   // ==========================================
