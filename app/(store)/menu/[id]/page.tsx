@@ -1,6 +1,11 @@
 import { MENU } from '@/config/menu';
 import MenuDetail from '@/components/pages/MenuDetail';
 import { notFound } from 'next/navigation';
+export async function generateStaticParams() {
+  return MENU.map((menu) => ({
+    id: menu.id.toString(),
+  }));
+}
 export default async function Page({
   params,
 }: {
