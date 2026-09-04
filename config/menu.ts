@@ -85,6 +85,7 @@ export const MENU:MenuItem[] = [
   { id: "104", name: "កម្ពុជាដបស",       price: 1.50, category: "beer", image: "/images/menu/104.webp" },
   { id: "105", name: "ថៃហ្គឺដបស",       price: 1.50, category: "beer", image: "/images/menu/105.webp" },
   { id: "106", name: "ABC ស៊ីងហ្គាពួរ",  price: 2.00, category: "beer", image: "/images/menu/106.webp" },
+  { id: "121", name: "Ganzberg",  price: 0.75, category: "beer", image: "/images/menu/121.webp" },
 
   // ==========================================
   // 5. ភេសជ្ជៈ (soft-drink)
@@ -143,6 +144,7 @@ export const MENU:MenuItem[] = [
   { id: "84",  name: "យ៉ាហុឺលីងពងទាប្រៃ",   price: 4.00, category: "dried-meat", image: "/images/menu/84.webp" },
   { id: "85",  name: "ពោតលីងពងទាប្រៃ",     price: 4.00, category: "dried-meat", image: "/images/menu/85.webp" },
   { id: "86",  name: "ពោតលីងបង្គាគ្រៀម",    price: 4.00, category: "dried-meat", image: "/images/menu/86.webp" },
+  { id: "120",  name: "សណ្តែកជប៉ុនស្ងោរ",    price: 3.00, category: "dried-meat", image: "/images/menu/120.webp" },
 
   // ==========================================
   // 11. ត្រី (fish)
@@ -151,7 +153,9 @@ export const MENU:MenuItem[] = [
   { id: "68",  name: "ត្រីក្រហមចំហ៊ុយទឹកស៊ីអ៊ីវ", price: 6.00, category: "fish", image: "/images/menu/68.webp" },
   { id: "69",  name: "ត្រីក្រហមចំហ៊ុយក្រូចឆ្មារ", price: 6.00, category: "fish", image: "/images/menu/69.webp",featured:true },
   { id: "70",  name: "ត្រីក្រហមបំពងបុរាណ",      price: 7.00, category: "fish", image: "/images/menu/70.webp" },
+   { id: "122",  name: "ត្រីក្រហមចៀនចួន",      price: 6.00, category: "fish", image: "/images/menu/122.webp" },
   { id: "71",  name: "តុងយាំគ្រឿងសមុទ្រ",      price: 6.00, category: "fish", image: "/images/menu/71.webp" },
+  
 
   // ==========================================
   // 12. ព្រុយត្រី (fish-fin)
