@@ -153,7 +153,7 @@ export const MENU:MenuItem[] = [
   { id: "68",  name: "ត្រីក្រហមចំហ៊ុយទឹកស៊ីអ៊ីវ", price: 6.00, category: "fish", image: "/images/menu/68.webp" },
   { id: "69",  name: "ត្រីក្រហមចំហ៊ុយក្រូចឆ្មារ", price: 6.00, category: "fish", image: "/images/menu/69.webp",featured:true },
   { id: "70",  name: "ត្រីក្រហមបំពងបុរាណ",      price: 7.00, category: "fish", image: "/images/menu/70.webp" },
-   { id: "122",  name: "ត្រីក្រហមចៀនចួន",      price: 6.00, category: "fish", image: "/images/menu/122.webp" },
+   { id: "122",  name: "ត្រីក្រហមចៀនជូរអែម",      price: 6.00, category: "fish", image: "/images/menu/122.webp" },
   { id: "71",  name: "តុងយាំគ្រឿងសមុទ្រ",      price: 6.00, category: "fish", image: "/images/menu/71.webp" },
   
 
