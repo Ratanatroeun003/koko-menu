@@ -1,24 +1,31 @@
-import Link from 'next/link';
+'use client';
 import Image from 'next/image';
 import { Card, CardFooter } from '@/components/ui/card';
 import { MoveLeft } from 'lucide-react';
 import { MenuItem } from '@/config/menu';
+import { useRouter } from 'next/navigation';
 
 interface MenuDetailPageProps {
   menu: MenuItem;
 }
 
 export default function MenuDetailPage({ menu }: MenuDetailPageProps) {
+  const router = useRouter();
+  const handleBack = () => {
+    router.back();
+  };
   return (
     <div className="w-full min-h-screen mt-2">
       <div className="flex mx-auto w-full max-w-4xl flex-col gap-4 items-center px-4 py-2 justify-center">
         {/* Back Button */}
-        <Link href="/">
-          <div className="flex items-center gap-2 font-semibold bg-green-600 text-white px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors cursor-pointer shadow-sm">
-            <MoveLeft className="w-5 h-5" />
-            <span className="font-khmer text-lg">ត្រឡប់ក្រោយទៅកាន់ Menu</span>
-          </div>
-        </Link>
+        <button
+          type="button"
+          onClick={handleBack}
+          className="flex items-center gap-2 text-sm font-semibold bg-green-600 text-white cursor-pointer hover:bg-green-700 hover:scale-110 px-4 py-2 rounded-lg transition-colors duration-200"
+        >
+          <MoveLeft />
+          <span className="font-khmer text-lg">ត្រឡប់ក្រោយ</span>
+        </button>
 
         {/* Menu Detail Card */}
         <Card className="w-full max-w-md overflow-hidden rounded-xl border border-border shadow-md p-0">

@@ -44,7 +44,7 @@ const HomePage = () => {
             >
               <TabsList
                 variant="line"
-                className="flex w-full overflow-x-auto whitespace-nowrap flex-nowrap justify-start no-scrollbar gap-2 touch-pan-x scroll-smooth max-w-full"
+                className="flex w-full overflow-x-auto whitespace-nowrap flex-nowrap justify-start no-scrollbar gap-2 touch-pan-x overscroll-x-contain scroll-smooth max-w-full"
               >
                 <TabsTrigger
                   value="all"
