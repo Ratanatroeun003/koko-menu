@@ -97,16 +97,22 @@ export const HomeContent = () => {
           </div>
           <Separator className="mt-2" />
         </div>
-        <motion.div
-          layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-2 lg:gap-3"
-        >
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4">
           <AnimatePresence mode="popLayout">
             {filteredMenu.map((item, index) => (
-              <MenuCard key={item.id} item={item} isPriority={index < 4} />
+              <motion.div
+                key={item.id}
+                layout
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.2 }}
+              >
+                <MenuCard item={item} isPriority={index < 4} />
+              </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </main>
     </div>
   );
@@ -118,3 +124,20 @@ export const HomePage = () => {
     </Suspense>
   );
 };
+
+{
+  /* <AnimatePresence mode="popLayout">
+  {filteredMenu.map((item, index) => (
+    <motion.div
+      key={item.id}
+      layout
+      initial={{ opacity: 0, scale: 0.96 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.96 }}
+      transition={{ duration: 0.2 }}
+    >
+      <MenuCard item={item} isPriority={index < 4} />
+    </motion.div>
+  ))}
+</AnimatePresence>; */
+}
